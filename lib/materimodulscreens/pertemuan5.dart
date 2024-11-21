@@ -27,6 +27,21 @@ class _FormScreenState extends State<FormScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Row(
+              children: [
+                Image.asset(
+                  'images/kucing-marah.jpg',
+                  height: 150,
+                  width: 150,
+                ),
+                Image.asset(
+                  'images/meme-kocak-kucing.jpeg',
+                  height: 150,
+                  width: 150,
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
             TextField(
               onChanged: (String value) {},
               controller: textEditingController,
