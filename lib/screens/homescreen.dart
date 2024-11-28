@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:wisata_mobile_7/models/destination_model.dart';
 import 'package:wisata_mobile_7/utils/const.dart';
+import 'package:wisata_mobile_7/widgets/popular_destination.dart';
+import 'package:wisata_mobile_7/widgets/rekomendasi_destination.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -9,9 +12,137 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
+  int selectedPage = 0;
+  List<TravelDestination> popular = listDestination
+      .where((element) => element.category == 'popular')
+      .toList();
+
+  List<TravelDestination> rekomendasi = listDestination
+      .where((element) => element.category == 'rekomendasi')
+      .toList();
+
+  List<IconData> icons = [
+    Icons.home_filled,
+    Icons.bookmark_border_rounded,
+    Icons.shopping_cart_outlined,
+    Icons.person_outline_outlined,
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: kBackgroundColor,
+      body: Column(
+        children: [
+          buildAppBar(),
+          const SizedBox(height: 20),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Tempat Populer',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                )
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(bottom: 20, left: 16),
+            child: Row(
+              children: List.generate(
+                popular.length,
+                (index) => Padding(
+                  padding: const EdgeInsets.only(right: 15),
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: PopularDestination(destination: popular[index]),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 20),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Tempat Populer',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                )
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+          Expanded(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Column(
+                children: List.generate(
+                  popular.length,
+                  (index) => Padding(
+                    padding: const EdgeInsets.only(bottom: 15),
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: RekomendasiDestination(
+                          destination: rekomendasi[index]),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  decoration: BoxDecoration(
+                      color: kButtonColor,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: List.generate(
+                      icons.length,
+                      (index) => GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            selectedPage = index;
+                          });
+                        },
+                        child: Icon(
+                          icons[index],
+                          size: 32,
+                          color: selectedPage == index
+                              ? Colors.white
+                              : Colors.white.withOpacity(0.4),
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
 
@@ -57,7 +188,7 @@ Widget buildSearchButton() {
         ),
       ],
     ),
-    child: TextField(
+    child: const TextField(
       decoration: InputDecoration(
         hintText: 'cari destinasi...',
         hintStyle: TextStyle(
