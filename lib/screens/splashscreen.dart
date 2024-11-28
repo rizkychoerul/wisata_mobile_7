@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:wisata_mobile_7/materimodulscreens/pertemuan5.dart';
-import 'package:wisata_mobile_7/materimodulscreens/pertemuan6.dart';
-import 'package:wisata_mobile_7/screens/landingpage.dart';
+import 'package:wisata_mobile_7/screens/landingpagescreen.dart';
 import 'package:wisata_mobile_7/utils/const.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const LandingPage()),
+        MaterialPageRoute(builder: (context) => const LandingPageScreen()),
       );
     });
   }

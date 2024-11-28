@@ -3,14 +3,14 @@ import 'package:wisata_mobile_7/materimodulscreens/pertemuan5.dart';
 import 'package:wisata_mobile_7/models/landing_page.dart';
 import 'package:wisata_mobile_7/utils/const.dart';
 
-class LandingPage extends StatefulWidget {
-  const LandingPage({super.key});
+class LandingPageScreen extends StatefulWidget {
+  const LandingPageScreen({super.key});
 
   @override
-  State<LandingPage> createState() => _LandingPageState();
+  State<LandingPageScreen> createState() => _LandingPageScreenState();
 }
 
-class _LandingPageState extends State<LandingPage> {
+class _LandingPageScreenState extends State<LandingPageScreen> {
   int currentIndex = 0;
   Widget dotIndicator(int index) {
     return AnimatedContainer(
@@ -56,7 +56,6 @@ class _LandingPageState extends State<LandingPage> {
                         fontSize: 45,
                         color: Colors.white,
                         fontWeight: FontWeight.w500,
-                        fontFamily: "NunitoSans",
                         height: 1,
                       ),
                     ),
@@ -66,10 +65,10 @@ class _LandingPageState extends State<LandingPage> {
                     const Text(
                       "Ayo jelajahi Indonesia bersama kami dan ciptakan kenangan tak terlupakan yang akan bertahan seumur hidup.",
                       style: TextStyle(
-                          fontSize: 11,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: "NunitoSans"),
+                        fontSize: 11,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                     const SizedBox(
                       height: 10,
