@@ -21,11 +21,10 @@ class _HomescreenState extends State<Homescreen> {
       .where((element) => element.category == 'rekomendasi')
       .toList();
 
-  List<IconData> icons = [
+  List<IconData> icons = <IconData>[
     Icons.home_filled,
-    Icons.bookmark_border_rounded,
-    Icons.shopping_cart_outlined,
-    Icons.person_outline_outlined,
+    Icons.list,
+    Icons.help_outline,
   ];
 
   @override
@@ -33,21 +32,21 @@ class _HomescreenState extends State<Homescreen> {
     return Scaffold(
       backgroundColor: kBackgroundColor,
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Cibodas App',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: kButtonColor,
       ),
       body: Column(
-        children: [
+        children: <Widget>[
           buildAppBar(),
           const SizedBox(height: 20),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: <Widget>[
                 Text(
                   'Tempat Populer',
                   style: TextStyle(
@@ -117,16 +116,16 @@ class _HomescreenState extends State<Homescreen> {
             alignment: Alignment.bottomCenter,
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              children: [
+              children: <Widget>[
                 Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: kBackgroundColor,
                     // borderRadius: BorderRadius.circular(10),
                   ),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: List.generate(
                       icons.length,
                       (index) => GestureDetector(
@@ -148,7 +147,7 @@ class _HomescreenState extends State<Homescreen> {
                 )
               ],
             ),
-          )
+          ),
         ],
       ),
     );
@@ -158,10 +157,10 @@ class _HomescreenState extends State<Homescreen> {
 Widget buildAppBar() {
   return Container(
     height: 120,
-    margin: EdgeInsets.only(left: 10, right: 10, top: 20),
-    decoration: BoxDecoration(
+    margin: const EdgeInsets.only(left: 10, right: 10, top: 20),
+    decoration: const BoxDecoration(
       // color: Colors.white,
-      borderRadius: const BorderRadius.only(
+      borderRadius: BorderRadius.only(
         topLeft: Radius.circular(20),
         topRight: Radius.circular(20),
         bottomLeft: Radius.circular(20),
@@ -175,10 +174,10 @@ Widget buildAppBar() {
       //       offset: const Offset(0, 5)),
       // ],
     ),
-    child: SafeArea(
+    child: const SafeArea(
       child: Center(
         child: Padding(
-          padding: const EdgeInsets.only(left: 15, right: 15),
+          padding: EdgeInsets.only(left: 15, right: 15),
           child: Text(
             'Selamat Datang di Cibodas App',
             style: TextStyle(
