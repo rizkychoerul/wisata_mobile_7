@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_mobile_7/models/destination_model.dart';
+import 'package:wisata_mobile_7/screens/wisata.dart';
 import 'package:wisata_mobile_7/utils/const.dart';
 import 'package:wisata_mobile_7/widgets/popular_destination.dart';
 import 'package:wisata_mobile_7/widgets/rekomendasi_destination.dart';
@@ -112,7 +113,9 @@ class _HomescreenState extends State<Homescreen> {
               ),
             ),
           ),
-          Align(
+
+          // Bottom navigation awal
+          /*Align(
             alignment: Alignment.bottomCenter,
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -130,9 +133,7 @@ class _HomescreenState extends State<Homescreen> {
                       icons.length,
                       (index) => GestureDetector(
                         onTap: () {
-                          setState(() {
-                            selectedPage = index;
-                          });
+                          selectedPage = index;
                         },
                         child: Icon(
                           icons[index],
@@ -147,7 +148,7 @@ class _HomescreenState extends State<Homescreen> {
                 )
               ],
             ),
-          ),
+          ),*/
         ],
       ),
     );

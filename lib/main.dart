@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wisata_mobile_7/materimodulscreens/pertemuan5.dart';
 import 'package:wisata_mobile_7/screens/homescreen.dart';
-import 'package:wisata_mobile_7/screens/splashscreen.dart';
+import 'package:wisata_mobile_7/screens/tentang.dart';
+import 'package:wisata_mobile_7/screens/wisata.dart';
 
 void main() {
   runApp(TravelApp());
@@ -15,7 +15,60 @@ class TravelApp extends StatelessWidget {
     return MaterialApp(
       title: 'Wisata Mobile',
       debugShowCheckedModeBanner: false,
-      home: Homescreen(),
+      home: BottomNavBar(),
+    );
+  }
+}
+
+class BottomNavBar extends StatefulWidget {
+  const BottomNavBar({super.key});
+
+  @override
+  State<BottomNavBar> createState() => _BottomNavBarState();
+}
+
+class _BottomNavBarState extends State<BottomNavBar> {
+  int selectedPage = 0;
+
+  static const List<Widget> _widgetOptions = <Widget>[
+    Homescreen(),
+    Wisata(),
+    Tentang(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      selectedPage = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: _widgetOptions.elementAt(selectedPage),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.list),
+            label: 'Wisata',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.help_outline),
+            label: 'Tentang',
+          ),
+        ],
+        currentIndex: selectedPage,
+        selectedItemColor: Colors.white,
+        backgroundColor: Colors.black,
+        onTap: _onItemTapped,
+        unselectedItemColor: Colors.grey[500],
+      ),
     );
   }
 }

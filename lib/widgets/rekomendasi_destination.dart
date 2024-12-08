@@ -51,7 +51,7 @@ class RekomendasiDestination extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                Row(
+                /*Row(
                   children: [
                     const Icon(
                       Icons.location_on_outlined,
@@ -66,11 +66,13 @@ class RekomendasiDestination extends StatelessWidget {
                       ),
                     ),
                   ],
-                ),
+                ),*/
                 const SizedBox(
                   height: 5,
                 ),
-                Row(
+
+                //Rating tempat rekomendasi
+                /*Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -100,7 +102,8 @@ class RekomendasiDestination extends StatelessWidget {
                       ),
                     ),
                   ],
-                )
+                )*/
+                
               ],
             ),
           ),

@@ -62,7 +62,7 @@ class PopularDestination extends StatelessWidget {
                                   fontWeight: FontWeight.w500,
                                   fontFamily: "NunitoSans"),
                             ),
-                            Row(
+                            /*Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 const Icon(
@@ -81,10 +81,11 @@ class PopularDestination extends StatelessWidget {
                                       fontFamily: "NunitoSans"),
                                 ),
                               ],
-                            ),
+                            ),*/
                           ],
                         ),
-                        Row(
+                        // Rating tempat populer
+                        /*Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(
@@ -104,7 +105,7 @@ class PopularDestination extends StatelessWidget {
                                   fontFamily: "NunitoSans"),
                             )
                           ],
-                        ),
+                        ),*/
                       ],
                     ),
                   ),
