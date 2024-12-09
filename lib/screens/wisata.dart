@@ -9,7 +9,8 @@ class Wisata extends StatefulWidget {
 }
 
 class _WisataState extends State<Wisata> {
-  var styleJudul = TextStyle(fontSize: 20, fontWeight: FontWeight.w700);
+  var styleTitle = TextStyle(fontSize: 20, fontWeight: FontWeight.w700);
+  var styleDetail = TextStyle(fontSize: 12, fontWeight: FontWeight.w700);
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +25,46 @@ class _WisataState extends State<Wisata> {
       body: ListView(
         children: <Widget>[
           GestureDetector(
+            child: Card(
+              elevation: 10,
+              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+              child: Stack(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.37,
+                        height: MediaQuery.of(context).size.height * 0.12,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            image: DecorationImage(
+                                image:
+                                    AssetImage('assets/images/Boywithuke.png'),
+                                fit: BoxFit.cover)),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 50),
+                        child: Center(
+                          child: Column(
+                            children: <Widget>[
+                              Text(
+                                'Judul Wisata 1',
+                                style: styleTitle,
+                              ),
+                              Text(
+                                'Keterangan',
+                                style: styleDetail,
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
@@ -31,35 +72,48 @@ class _WisataState extends State<Wisata> {
                 ),
               );
             },
-            child: Card(
-              elevation: 10,
-              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.all(5),
-                    width: 100,
-                    height: 100,
-                    child: Image(
-                        image: AssetImage('assets/images/Boywithuke.png')),
-                  ),
-                  Container(
-                    child: Column(
-                      children: [
-                        Text(
-                          'Judul Wisata',
-                          style: styleJudul,
-                        ),
-                        Text('Keterangan'),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
           ),
           GestureDetector(
+            child: Card(
+              elevation: 10,
+              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+              child: Stack(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.37,
+                        height: MediaQuery.of(context).size.height * 0.12,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            image: DecorationImage(
+                                image:
+                                    AssetImage('assets/images/Boywithuke.png'),
+                                fit: BoxFit.cover)),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 50),
+                        child: Center(
+                          child: Column(
+                            children: <Widget>[
+                              Text(
+                                'Judul Wisata 2',
+                                style: styleTitle,
+                              ),
+                              Text(
+                                'Keterangan',
+                                style: styleDetail,
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
@@ -67,35 +121,48 @@ class _WisataState extends State<Wisata> {
                 ),
               );
             },
-            child: Card(
-              elevation: 10,
-              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.all(5),
-                    width: 100,
-                    height: 100,
-                    child: Image(
-                        image: AssetImage('assets/images/Boywithuke.png')),
-                  ),
-                  Container(
-                    child: Column(
-                      children: [
-                        Text(
-                          'Judul Wisata',
-                          style: styleJudul,
-                        ),
-                        Text('Keterangan'),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
           ),
           GestureDetector(
+            child: Card(
+              elevation: 10,
+              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+              child: Stack(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.37,
+                        height: MediaQuery.of(context).size.height * 0.12,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            image: DecorationImage(
+                                image:
+                                    AssetImage('assets/images/Boywithuke.png'),
+                                fit: BoxFit.cover)),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 50),
+                        child: Center(
+                          child: Column(
+                            children: <Widget>[
+                              Text(
+                                'Judul Wisata 3',
+                                style: styleTitle,
+                              ),
+                              Text(
+                                'Keterangan',
+                                style: styleDetail,
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
@@ -103,33 +170,6 @@ class _WisataState extends State<Wisata> {
                 ),
               );
             },
-            child: Card(
-              elevation: 10,
-              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.all(5),
-                    width: 100,
-                    height: 100,
-                    child: Image(
-                        image: AssetImage('assets/images/Boywithuke.png')),
-                  ),
-                  Container(
-                    child: Column(
-                      children: [
-                        Text(
-                          'Judul Wisata',
-                          style: styleJudul,
-                        ),
-                        Text('Keterangan'),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
           ),
         ],
       ),

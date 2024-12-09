@@ -36,7 +36,7 @@ class _HomescreenState extends State<Homescreen> {
           'Cibodas App',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: kButtonColor,
+        backgroundColor: Colors.black,
       ),
       body: Column(
         children: <Widget>[
@@ -159,20 +159,20 @@ Widget buildAppBar() {
     height: 120,
     margin: const EdgeInsets.only(left: 10, right: 10, top: 20),
     decoration: const BoxDecoration(
-      // color: Colors.white,
+      /*color: Colors.white,*/
       borderRadius: BorderRadius.only(
         topLeft: Radius.circular(20),
         topRight: Radius.circular(20),
         bottomLeft: Radius.circular(20),
         bottomRight: Radius.circular(20),
       ),
-      // boxShadow: [
-      //   BoxShadow(
-      //       color: Colors.grey.withOpacity(0.7),
-      //       spreadRadius: 5,
-      //       blurRadius: 10,
-      //       offset: const Offset(0, 5)),
-      // ],
+      /*boxShadow: [
+        BoxShadow(
+            color: Colors.grey.withOpacity(0.7),
+            spreadRadius: 5,
+            blurRadius: 10,
+            offset: const Offset(0, 5)),
+      ],*/
     ),
     child: const SafeArea(
       child: Center(
