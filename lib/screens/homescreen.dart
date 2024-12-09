@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_mobile_7/models/destination_model.dart';
-import 'package:wisata_mobile_7/screens/wisata.dart';
 import 'package:wisata_mobile_7/utils/const.dart';
 import 'package:wisata_mobile_7/widgets/popular_destination.dart';
 import 'package:wisata_mobile_7/widgets/rekomendasi_destination.dart';
