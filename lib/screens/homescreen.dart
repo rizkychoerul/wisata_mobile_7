@@ -21,11 +21,11 @@ class _HomescreenState extends State<Homescreen> {
       .where((element) => element.category == 'rekomendasi')
       .toList();
 
-  List<IconData> icons = <IconData>[
+  /*List<IconData> icons = <IconData>[
     Icons.home_filled,
     Icons.list,
     Icons.help_outline,
-  ];
+  ];*/
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class _HomescreenState extends State<Homescreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
-                  'Tempat Populer',
+                  'Lainnya',
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -75,8 +75,8 @@ class _HomescreenState extends State<Homescreen> {
               ),
             ),
           ),
-          const SizedBox(height: 20),
-          const Padding(
+          const SizedBox(height: 2.5),
+          /*const Padding(
             padding: EdgeInsets.symmetric(horizontal: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -91,8 +91,8 @@ class _HomescreenState extends State<Homescreen> {
                 )
               ],
             ),
-          ),
-          const SizedBox(height: 20),
+          ),*/
+          const SizedBox(height: 2.5),
           Expanded(
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,

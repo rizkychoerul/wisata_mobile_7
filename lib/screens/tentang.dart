@@ -35,7 +35,10 @@ class _TentangState extends State<Tentang> {
               margin: EdgeInsets.only(top: 30, bottom: 10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
-                image: DecorationImage(image: AssetImage('assets/images/Boywithuke.png'), fit: BoxFit.cover)
+                image: DecorationImage(
+                    image: NetworkImage(
+                        'https://images.unsplash.com/photo-1555865138-193ba536d7e0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+                    fit: BoxFit.cover),
               ),
             ),
             Column(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wisata_mobile_7/models/destination_model.dart';
 import 'package:wisata_mobile_7/screens/tentang.dart';
+import 'package:wisata_mobile_7/utils/const.dart';
 
 class Wisata extends StatefulWidget {
   const Wisata({super.key});
@@ -15,6 +17,7 @@ class _WisataState extends State<Wisata> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kBackgroundColor,
       appBar: AppBar(
         title: Text(
           'Wisata',
@@ -37,11 +40,12 @@ class _WisataState extends State<Wisata> {
                         width: MediaQuery.of(context).size.width * 0.37,
                         height: MediaQuery.of(context).size.height * 0.12,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                            image: DecorationImage(
-                                image:
-                                    AssetImage('assets/images/Boywithuke.png'),
-                                fit: BoxFit.cover)),
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          image: DecorationImage(
+                              image: NetworkImage(
+                                  'https://images.unsplash.com/photo-1683772965002-67c1f0a6d5fd?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+                              fit: BoxFit.cover),
+                        ),
                       ),
                       Container(
                         margin: EdgeInsets.only(right: 50),
@@ -88,8 +92,8 @@ class _WisataState extends State<Wisata> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             image: DecorationImage(
-                                image:
-                                    AssetImage('assets/images/Boywithuke.png'),
+                                image: NetworkImage(
+                                    'https://images.unsplash.com/photo-1571366343168-631c5bcca7a4?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
                                 fit: BoxFit.cover)),
                       ),
                       Container(
@@ -137,8 +141,8 @@ class _WisataState extends State<Wisata> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             image: DecorationImage(
-                                image:
-                                    AssetImage('assets/images/Boywithuke.png'),
+                                image: NetworkImage(
+                                    'https://images.unsplash.com/photo-1724258391590-6cfdc2d783b4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
                                 fit: BoxFit.cover)),
                       ),
                       Container(

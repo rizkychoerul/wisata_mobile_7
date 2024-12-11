@@ -17,7 +17,7 @@ class RekomendasiDestination extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 5),
       child: Row(
         children: [
           Container(
@@ -32,12 +32,12 @@ class RekomendasiDestination extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            width: 5,
+            width: 15,
           ),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
                   destination.name,
@@ -47,6 +47,11 @@ class RekomendasiDestination extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     fontFamily: "NunitoSans",
                   ),
+                ),
+                Text(
+                  'Kebun Raya Cibodas (aksara Sunda: ᮊᮨᮘᮥᮔ᮪ ᮛᮚ ᮎᮤᮘᮧᮓᮞ᮪) (bahasa Inggris: Cibodas Botanical Garden), terletak di Kompleks Hutan Gunung Gede dan Gunung Pangrango, Desa Cimacan, Cipanas, Cianjur, Jawa Barat. Topografi lapangannya bergelombang dan berbukit-bukit dengan ketinggian kurang lebih 1.300 s.d. 1.425 meter di atas permukaan laut dengan luas 84,99 hektar. Temperatur rata-rata 20,06 °C, kelembaban 80,82 % dan rata-rata curah hujan 2.950 mm per tahun.Kebun Raya Cibodas merupakan tempat yang nyaman untuk beristirahat sambil menikmati keindahan berbagai jenis tumbuhan yang berasal dari Indonesia dan negara-negara lain.',
+                  style: TextStyle(fontSize: 8),
+                  maxLines: 4,
                 ),
                 const SizedBox(
                   height: 10,
@@ -103,11 +108,10 @@ class RekomendasiDestination extends StatelessWidget {
                     ),
                   ],
                 )*/
-                
               ],
             ),
           ),
-          Column(
+          /*Column(
             children: [
               const Spacer(),
               Text.rich(
@@ -129,7 +133,7 @@ class RekomendasiDestination extends StatelessWidget {
                 ),
               ),
             ],
-          )
+          )*/
         ],
       ),
     );

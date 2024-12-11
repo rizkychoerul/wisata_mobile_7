@@ -29,8 +29,8 @@ class PopularDestination extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(15),
           child: Container(
-            height: 165,
-            width: MediaQuery.of(context).size.width * 0.65,
+            height: 135,
+            width: MediaQuery.of(context).size.width * 0.33,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               image: DecorationImage(
