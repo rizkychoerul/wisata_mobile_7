@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:wisata_mobile_7/models/destination_model.dart';
 import 'package:wisata_mobile_7/screens/tentang.dart';
 import 'package:wisata_mobile_7/screens/wisata_route_page.dart';
+import 'package:wisata_mobile_7/screens/wisatadescription.dart';
+
 import 'package:wisata_mobile_7/utils/const.dart';
 import 'package:wisata_mobile_7/widgets/rekomendasi_destination.dart';
 
@@ -199,7 +201,14 @@ class _WisataState extends State<Wisata> {
                   (index) => Padding(
                     padding: const EdgeInsets.only(bottom: 15),
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                Wisatadescription(), // ganti lokasi page
+                          ),
+                        );
+                      },
                       child: RekomendasiDestination(
                           destination: rekomendasi[index]),
                     ),
