@@ -8,56 +8,92 @@ class Wisatadescription extends StatefulWidget {
 }
 
 class _WisatadescriptionState extends State<Wisatadescription> {
-  var styleTitle = TextStyle(fontSize: 20, fontWeight: FontWeight.w700);
-  var styleDetail = TextStyle(fontSize: 12, fontWeight: FontWeight.w700);
+  var styleTitle = const TextStyle(
+      fontSize: 26, fontWeight: FontWeight.bold, color: Colors.black87);
+  var styleDetail = const TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.w400,
+      color: Colors.black54,
+      height: 1.5);
   String textTentang =
-      'Kebun Raya bogor merupakan UPT balai Konservasi tumbuhan di bawah pusat konservasi Kebun Raya Bogor. Lokasinya berada di antara gunung Gede dan Pangrango di ketinggian 1425 di atas permukaan laut. Areanya sejuk menempati lahan setidaknya seluas 85 Ha.Selain sebagai balai konservasi, Kebun Raya ini juga membuka diri untuk melayani masyarakat sesuai dengan kebutuhannya. Banyak layanan yang ditawarkan kepada masyarakat di antaranya pendidikan Lingkungan dan penelitian. Namun, Kebun Raya ini juga menjadi destinasi wisata karena kesejukan dan keindahan pemandangannya.';
+      'Kebun Raya Bogor merupakan UPT balai konservasi tumbuhan di bawah pusat konservasi Kebun Raya Bogor. Lokasinya berada di antara Gunung Gede dan Pangrango di ketinggian 1425 di atas permukaan laut. Areanya sejuk menempati lahan setidaknya seluas 85 Ha. Selain sebagai balai konservasi, Kebun Raya ini juga membuka diri untuk melayani masyarakat sesuai dengan kebutuhannya. Banyak layanan yang ditawarkan kepada masyarakat di antaranya pendidikan lingkungan dan penelitian. Namun, Kebun Raya ini juga menjadi destinasi wisata karena kesejukan dan keindahan pemandangannya.';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: Colors.white, // ubah warna arrow back (default hitam)
+        iconTheme: const IconThemeData(
+          color: Colors.white, // Ubah warna ikon back
         ),
-        title: Text(
+        title: const Text(
           'Tentang',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.black,
       ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Container(
-              width: 300,
-              height: 150,
-              margin: EdgeInsets.only(top: 30, bottom: 10),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                image: DecorationImage(
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                width: double.infinity,
+                height: 200,
+                margin: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.all(Radius.circular(15)),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black26,
+                      blurRadius: 10,
+                      offset: Offset(0, 4),
+                    ),
+                  ],
+                  image: const DecorationImage(
                     image: NetworkImage(
                         'https://lapisbogor.co.id/wp-content/uploads/2022/09/kebun-raya-bogor-4.jpg'),
-                    fit: BoxFit.cover),
-              ),
-            ),
-            Column(
-              children: <Widget>[
-                Text(
-                  'Cibodas',
-                  style: styleTitle,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 50, top: 10, right: 50),
-                  child: Text(
-                    textTentang,
-                    textAlign: TextAlign.center,
-                    style: styleDetail,
+                    fit: BoxFit.cover,
                   ),
                 ),
-              ],
-            ),
-          ],
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: Text(
+                  'Cibodas',
+                  style: styleTitle,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                child: Text(
+                  textTentang,
+                  textAlign: TextAlign.justify,
+                  style: styleDetail,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 32, vertical: 12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                  ),
+                  child: const Text(
+                    'Explore More',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
