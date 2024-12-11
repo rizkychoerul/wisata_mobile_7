@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_mobile_7/models/destination_model.dart';
+import 'package:wisata_mobile_7/screens/wisata.dart';
 import 'package:wisata_mobile_7/utils/const.dart';
 import 'package:wisata_mobile_7/widgets/popular_destination.dart';
 import 'package:wisata_mobile_7/widgets/rekomendasi_destination.dart';
@@ -68,7 +69,13 @@ class _HomescreenState extends State<Homescreen> {
                 (index) => Padding(
                   padding: const EdgeInsets.only(right: 15),
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => Wisata(), // ganti lokasi page
+                        ),
+                      );
+                    },
                     child: PopularDestination(destination: popular[index]),
                   ),
                 ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_mobile_7/models/destination_model.dart';
 import 'package:wisata_mobile_7/screens/tentang.dart';
+import 'package:wisata_mobile_7/screens/wisata_route_page.dart';
 import 'package:wisata_mobile_7/utils/const.dart';
+import 'package:wisata_mobile_7/widgets/rekomendasi_destination.dart';
 
 class Wisata extends StatefulWidget {
   const Wisata({super.key});
@@ -14,20 +16,31 @@ class _WisataState extends State<Wisata> {
   var styleTitle = TextStyle(fontSize: 20, fontWeight: FontWeight.w700);
   var styleDetail = TextStyle(fontSize: 12, fontWeight: FontWeight.w700);
 
+  List<TravelDestination> popular = listDestination
+      .where((element) => element.category == 'popular')
+      .toList();
+
+  List<TravelDestination> rekomendasi = listDestination
+      .where((element) => element.category == 'rekomendasi')
+      .toList();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kBackgroundColor,
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white, // ubah warna arrow back (default hitam)
+        ),
         title: Text(
           'Wisata',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.black,
       ),
-      body: ListView(
+      body: Column(
         children: <Widget>[
-          GestureDetector(
+          /*GestureDetector(
             child: Card(
               elevation: 10,
               margin: EdgeInsets.only(left: 10, top: 10, right: 10),
@@ -72,7 +85,7 @@ class _WisataState extends State<Wisata> {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => Tentang(), // ganti lokasi page
+                  builder: (context) => WisataRoutePage(), // ganti lokasi page
                 ),
               );
             },
@@ -121,7 +134,7 @@ class _WisataState extends State<Wisata> {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => Tentang(), // ganti lokasi page
+                  builder: (context) => WisataRoutePage(), // ganti lokasi page
                 ),
               );
             },
@@ -170,10 +183,30 @@ class _WisataState extends State<Wisata> {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => Tentang(), // ganti lokasi page
+                  builder: (context) => WisataRoutePage(), // ganti lokasi page
                 ),
               );
             },
+          ),*/
+          const SizedBox(height: 20),
+          Expanded(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Column(
+                children: List.generate(
+                  popular.length,
+                  (index) => Padding(
+                    padding: const EdgeInsets.only(bottom: 15),
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: RekomendasiDestination(
+                          destination: rekomendasi[index]),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ),
         ],
       ),

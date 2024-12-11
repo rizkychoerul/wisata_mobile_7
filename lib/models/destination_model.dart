@@ -30,7 +30,7 @@ List<TravelDestination> listDestination = [
       name: "Gunung Bromo",
       category: 'popular',
       image: [
-        "https://images.unsplash.com/photo-1683772965002-67c1f0a6d5fd?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://th.bing.com/th/id/OIP.pzfFG31O8QLxCf60IQEDaAAAAA?rs=1&pid=ImgDetMain",
         "https://images.unsplash.com/photo-1723407877285-584e2d0053ab?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1650198147183-4a802821f1ed?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1603347194698-9a1e21af75c8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -45,7 +45,7 @@ List<TravelDestination> listDestination = [
       name: "Pulau Komodo",
       category: 'popular',
       image: [
-        "https://images.unsplash.com/photo-1571366343168-631c5bcca7a4?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://www.hargatiket.net/wp-content/uploads/2018/09/air-terjun-kebun-raya-cibodas.jpg",
         "https://images.unsplash.com/photo-1590074721515-4e511fa59bcb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1578923286994-be444ceded23?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1624104416015-f0ef71c7800a?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
