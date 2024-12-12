@@ -10,11 +10,13 @@ class Wisatadescription extends StatefulWidget {
 class _WisatadescriptionState extends State<Wisatadescription> {
   var styleTitle = const TextStyle(
       fontSize: 26, fontWeight: FontWeight.bold, color: Colors.black87);
+
   var styleDetail = const TextStyle(
       fontSize: 14,
       fontWeight: FontWeight.w400,
       color: Colors.black54,
       height: 1.5);
+
   String textTentang =
       'Kebun Raya Bogor merupakan UPT balai konservasi tumbuhan di bawah pusat konservasi Kebun Raya Bogor. Lokasinya berada di antara Gunung Gede dan Pangrango di ketinggian 1425 di atas permukaan laut. Areanya sejuk menempati lahan setidaknya seluas 85 Ha. Selain sebagai balai konservasi, Kebun Raya ini juga membuka diri untuk melayani masyarakat sesuai dengan kebutuhannya. Banyak layanan yang ditawarkan kepada masyarakat di antaranya pendidikan lingkungan dan penelitian. Namun, Kebun Raya ini juga menjadi destinasi wisata karena kesejukan dan keindahan pemandangannya.';
 
@@ -26,7 +28,7 @@ class _WisatadescriptionState extends State<Wisatadescription> {
           color: Colors.white, // Ubah warna ikon back
         ),
         title: const Text(
-          'Tentang',
+          '...',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.black,
@@ -60,7 +62,7 @@ class _WisatadescriptionState extends State<Wisatadescription> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Text(
-                  'Cibodas',
+                  '...',
                   style: styleTitle,
                   textAlign: TextAlign.center,
                 ),

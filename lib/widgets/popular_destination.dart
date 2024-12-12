@@ -44,25 +44,31 @@ class PopularDestination extends StatelessWidget {
               children: [
                 const Spacer(),
                 Container(
-                  color: Colors.black.withOpacity(0.8),
+                  color: Colors.black.withOpacity(0.5),
                   child: Padding(
                     padding: const EdgeInsets.all(12),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              destination.name,
-                              style: const TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w500,
-                                  fontFamily: "NunitoSans"),
-                            ),
-                            /*Row(
+                        Flexible(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Center(
+                                child: Text(
+                                  destination.name,
+                                  style: const TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500,
+                                      fontFamily: "NunitoSans"),
+                                ),
+                              ),
+                            ],
+                          ),
+
+                          /*Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 const Icon(
@@ -82,8 +88,8 @@ class PopularDestination extends StatelessWidget {
                                 ),
                               ],
                             ),*/
-                          ],
                         ),
+
                         // Rating tempat populer
                         /*Row(
                           mainAxisAlignment: MainAxisAlignment.center,

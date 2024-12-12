@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_mobile_7/models/destination_model.dart';
-import 'package:wisata_mobile_7/screens/tentang.dart';
-import 'package:wisata_mobile_7/screens/wisata_route_page.dart';
 import 'package:wisata_mobile_7/screens/wisatadescription.dart';
 
 import 'package:wisata_mobile_7/utils/const.dart';
