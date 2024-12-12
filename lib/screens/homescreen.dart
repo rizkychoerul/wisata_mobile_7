@@ -33,6 +33,9 @@ class _HomescreenState extends State<Homescreen> {
     return Scaffold(
       backgroundColor: kBackgroundColor,
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white, // ubah warna arrow back (default hitam)
+        ),
         title: const Text(
           'Cibodas App',
           style: TextStyle(color: Colors.white),
@@ -41,7 +44,7 @@ class _HomescreenState extends State<Homescreen> {
       ),
       body: Column(
         children: <Widget>[
-          buildAppBar(),
+          // buildAppBar(),
           const SizedBox(height: 20),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 15),
@@ -110,7 +113,13 @@ class _HomescreenState extends State<Homescreen> {
                   (index) => Padding(
                     padding: const EdgeInsets.only(bottom: 15),
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => Wisata(), // ganti lokasi page
+                        ),
+                      );
+                      },
                       child: RekomendasiDestination(
                           destination: rekomendasi[index]),
                     ),

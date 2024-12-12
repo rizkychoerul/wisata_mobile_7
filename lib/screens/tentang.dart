@@ -44,7 +44,7 @@ class _TentangState extends State<Tentang> {
             Column(
               children: <Widget>[
                 Text(
-                  'Cibodas',
+                  'Cibodas App',
                   style: styleTitle,
                 ),
                 Padding(
