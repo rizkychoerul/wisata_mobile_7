@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_mobile_7/models/destination_model.dart';
 
-class RekomendasiDestination extends StatelessWidget {
+class RecommendWisataCard extends StatelessWidget {
   final TravelDestination destination;
-  const RekomendasiDestination({
+  const RecommendWisataCard({
     super.key,
     required this.destination,
   });
@@ -48,9 +48,13 @@ class RekomendasiDestination extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Kebun Raya Cibodas (aksara Sunda: ᮊᮨᮘᮥᮔ᮪ ᮛᮚ ᮎᮤᮘᮧᮓᮞ᮪) (bahasa Inggris: Cibodas Botanical Garden), terletak di Kompleks Hutan Gunung Gede dan Gunung Pangrango, Desa Cimacan, Cipanas, Cianjur, Jawa Barat. Topografi lapangannya bergelombang dan berbukit-bukit dengan ketinggian kurang lebih 1.300 s.d. 1.425 meter di atas permukaan laut dengan luas 84,99 hektar. Temperatur rata-rata 20,06 °C, kelembaban 80,82 % dan rata-rata curah hujan 2.950 mm per tahun.Kebun Raya Cibodas merupakan tempat yang nyaman untuk beristirahat sambil menikmati keindahan berbagai jenis tumbuhan yang berasal dari Indonesia dan negara-negara lain.',
+                  '''Kebun Raya Cibodas (aksara Sunda: ᮊᮨᮘᮥᮔ᮪ ᮛᮚ ᮎᮤᮘᮧᮓᮞ᮪) (bahasa Inggris: Cibodas Botanical Garden), 
+                  terletak di Kompleks Hutan Gunung Gede dan Gunung Pangrango, Desa Cimacan, Cipanas, Cianjur, Jawa Barat. 
+                  Topografi lapangannya bergelombang dan berbukit-bukit dengan ketinggian kurang lebih 1.300 s.d. 1.425 meter di atas permukaan laut dengan luas 84,99 hektar. 
+                  Temperatur rata-rata 20,06 °C, kelembaban 80,82 % dan rata-rata curah hujan 2.950 mm per tahun. 
+                  Kebun Raya Cibodas merupakan tempat yang nyaman untuk beristirahat sambil menikmati keindahan berbagai jenis tumbuhan yang berasal dari Indonesia dan negara-negara lain.''',
                   style: TextStyle(fontSize: 8),
-                  maxLines: 3,
+                  maxLines: 2,
                 ),
                 const SizedBox(
                   height: 10,
@@ -76,9 +80,9 @@ class RekomendasiDestination extends StatelessWidget {
                 ),
 
                 //Rating tempat rekomendasi
-                /*Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                Row(
                   mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Icon(
                       Icons.star,
@@ -106,7 +110,7 @@ class RekomendasiDestination extends StatelessWidget {
                       ),
                     ),
                   ],
-                )*/
+                )
               ],
             ),
           ),

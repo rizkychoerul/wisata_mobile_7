@@ -27,8 +27,8 @@ List<TravelDestination> listDestination = [
   // Popular destinations
   TravelDestination(
       id: 1,
-      name: "taman golf",
-      category: 'popular',
+      name: "Leupeut Goreng Cibodas Mantap wkwkwkwk",
+      category: 'kuliner',
       image: [
         "https://th.bing.com/th/id/OIP.pzfFG31O8QLxCf60IQEDaAAAAA?rs=1&pid=ImgDetMain",
         "https://images.unsplash.com/photo-1723407877285-584e2d0053ab?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -42,8 +42,8 @@ List<TravelDestination> listDestination = [
       rate: 4.8),
   TravelDestination(
       id: 2,
-      name: "camping",
-      category: 'popular',
+      name: "Food name",
+      category: 'kuliner',
       image: [
         "https://www.hargatiket.net/wp-content/uploads/2018/09/air-terjun-kebun-raya-cibodas.jpg",
         "https://images.unsplash.com/photo-1590074721515-4e511fa59bcb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -57,8 +57,8 @@ List<TravelDestination> listDestination = [
       rate: 4.9),
   TravelDestination(
       id: 3,
-      name: "Taman Nasional Gunung Gede Pangrango",
-      category: 'popular',
+      name: "Food name",
+      category: 'kuliner',
       image: [
         "https://tempatwisataunik.com/wp-content/uploads/2016/03/Taman-Nasional-Gunung-Gede-Pangrango.jpg",
         "https://images.unsplash.com/photo-1724258474555-1c850b2ccda6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -72,8 +72,8 @@ List<TravelDestination> listDestination = [
       rate: 4.8),
   TravelDestination(
       id: 4,
-      name: "air terjun cibeurem",
-      category: 'popular',
+      name: "Food name",
+      category: 'kuliner',
       image: [
         "https://tempatwisataunik.com/wp-content/uploads/2016/03/Air-Terjun-Cibeureum-300x168.jpg",
         "https://images.unsplash.com/photo-1698799619978-872b701b44a8?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -90,7 +90,7 @@ List<TravelDestination> listDestination = [
   TravelDestination(
       id: 5,
       name: "Kebun raya bogor",
-      category: 'rekomendasi',
+      category: 'wisata',
       image: [
         "https://tempatwisataunik.com/wp-content/uploads/2016/03/Kebun-Raya-Bogor...-300x157.jpg",
         "https://images.unsplash.com/photo-1603725616907-82eb483d7dea?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -105,7 +105,7 @@ List<TravelDestination> listDestination = [
   TravelDestination(
       id: 6,
       name: "Botanical garden",
-      category: 'rekomendasi',
+      category: 'wisata',
       image: [
         "https://cianjurkuy.id/wp-content/uploads/2023/09/Menikmati-Keindahan-Alam-di-Wisata-Cibodas-Botanical-Garden.webp",
         "https://images.unsplash.com/photo-1623598122059-9b5ef17619c8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -120,7 +120,7 @@ List<TravelDestination> listDestination = [
   TravelDestination(
       id: 7,
       name: "Rumah Kaca",
-      category: 'rekomendasi',
+      category: 'wisata',
       image: [
         "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/05/23/wisata-Cianjur-Kebun-Raya-Cibodas-3280187424.jpg",
         "https://images.unsplash.com/photo-1658642017201-45bb87756f1b?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -135,7 +135,7 @@ List<TravelDestination> listDestination = [
   TravelDestination(
       id: 8,
       name: "Cibodas camp and tour",
-      category: 'rekomendasi',
+      category: 'wisata',
       image: [
         "https://th.bing.com/th/id/R.dc235aea9b975766a4b4fbe3288f334d?rik=xee%2b16L9StuSUA&riu=http%3a%2f%2fcibodascamptour.com%2fuserfiles%2fimages%2flayanantourlokasipariwisataCibodas%2flayanan+tour+lokasi+pariwisata+Cibodas+(2).JPG&ehk=evQV21Umc7gCIm%2bBejpfTRqB4RHEEkYe4q41vYqhDYI%3d&risl=&pid=ImgRaw&r=0",
         "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -150,7 +150,7 @@ List<TravelDestination> listDestination = [
   TravelDestination(
       id: 9,
       name: "pibigbon camp",
-      category: 'rekomendasi',
+      category: 'wisata',
       image: [
         "https://i.ytimg.com/vi/R8gbpK43CzQ/maxresdefault.jpg",
         "https://images.unsplash.com/photo-1512631911403-3e3a06d12389?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

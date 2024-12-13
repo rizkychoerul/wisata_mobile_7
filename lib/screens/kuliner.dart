@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:wisata_mobile_7/models/destination_model.dart';
 import 'package:wisata_mobile_7/screens/wisatadescription.dart';
 import 'package:wisata_mobile_7/utils/const.dart';
-import 'package:wisata_mobile_7/widgets/wisata_card.dart';
+import 'package:wisata_mobile_7/widgets/kuliner_card.dart';
 
-class Wisata extends StatefulWidget {
-  const Wisata({super.key});
+class Kuliner extends StatefulWidget {
+  const Kuliner({super.key});
 
   @override
-  State<Wisata> createState() => _WisataState();
+  State<Kuliner> createState() => _KulinerState();
 }
 
-class _WisataState extends State<Wisata> {
+class _KulinerState extends State<Kuliner> {
   var styleTitle = TextStyle(fontSize: 20, fontWeight: FontWeight.w700);
   var styleDetail = TextStyle(fontSize: 12, fontWeight: FontWeight.w700);
 
@@ -32,7 +32,7 @@ class _WisataState extends State<Wisata> {
           color: Colors.white, // ubah warna arrow back (default hitam)
         ),
         title: Text(
-          'Wisata',
+          'Kuliner',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.black,
@@ -206,8 +206,8 @@ class _WisataState extends State<Wisata> {
                           ),
                         );
                       },
-                      child: WisataCard(
-                          destination: wisata[index]),
+                      child: KulinerCard(
+                          destination: kuliner[index]),
                     ),
                   ),
                 ),

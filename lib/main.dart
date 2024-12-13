@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_mobile_7/screens/homescreen.dart';
+import 'package:wisata_mobile_7/screens/kuliner.dart';
 import 'package:wisata_mobile_7/screens/tentang.dart';
 import 'package:wisata_mobile_7/screens/wisata.dart';
 
@@ -33,6 +34,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   static const List<Widget> _widgetOptions = <Widget>[
     Homescreen(),
     Wisata(),
+    Kuliner(),
     Tentang(),
   ];
 
@@ -53,14 +55,22 @@ class _BottomNavBarState extends State<BottomNavBar> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
+            backgroundColor: Colors.black
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.list),
             label: 'Wisata',
+            backgroundColor: Colors.black
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.food_bank),
+            label: 'Kuliner',
+            backgroundColor: Colors.black
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.help_outline),
             label: 'Tentang',
+            backgroundColor: Colors.black
           ),
         ],
         currentIndex: selectedPage,

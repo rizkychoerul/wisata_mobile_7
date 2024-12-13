@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_mobile_7/models/destination_model.dart';
+import 'package:wisata_mobile_7/screens/kuliner.dart';
 import 'package:wisata_mobile_7/screens/wisata.dart';
 import 'package:wisata_mobile_7/utils/const.dart';
-import 'package:wisata_mobile_7/widgets/popular_destination.dart';
-import 'package:wisata_mobile_7/widgets/rekomendasi_destination.dart';
+import 'package:wisata_mobile_7/widgets/recommend_kuliner_card.dart';
+import 'package:wisata_mobile_7/widgets/recommend_wisata_card.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -14,12 +15,12 @@ class Homescreen extends StatefulWidget {
 
 class _HomescreenState extends State<Homescreen> {
   int selectedPage = 0;
-  List<TravelDestination> popular = listDestination
-      .where((element) => element.category == 'popular')
+  List<TravelDestination> kuliner = listDestination
+      .where((element) => element.category == 'kuliner')
       .toList();
 
-  List<TravelDestination> rekomendasi = listDestination
-      .where((element) => element.category == 'rekomendasi')
+  List<TravelDestination> wisata = listDestination
+      .where((element) => element.category == 'wisata')
       .toList();
 
   /*List<IconData> icons = <IconData>[
@@ -52,7 +53,7 @@ class _HomescreenState extends State<Homescreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
-                  'Lainnya',
+                  'Rekomendasi Kuliner',
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -68,31 +69,31 @@ class _HomescreenState extends State<Homescreen> {
             padding: const EdgeInsets.only(bottom: 20, left: 16),
             child: Row(
               children: List.generate(
-                popular.length,
+                kuliner.length,
                 (index) => Padding(
                   padding: const EdgeInsets.only(right: 15),
                   child: GestureDetector(
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => Wisata(), // ganti lokasi page
+                          builder: (context) => Kuliner(), // ganti lokasi page
                         ),
                       );
                     },
-                    child: PopularDestination(destination: popular[index]),
+                    child: RecommendKulinerCard(destination: kuliner[index]),
                   ),
                 ),
               ),
             ),
           ),
-          const SizedBox(height: 2.5),
-          /*const Padding(
+          const SizedBox(height: 20),
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Tempat Rekomendasi',
+                  'Rekomendasi Wisata',
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -101,15 +102,15 @@ class _HomescreenState extends State<Homescreen> {
                 )
               ],
             ),
-          ),*/
-          const SizedBox(height: 2.5),
+          ),
+          const SizedBox(height: 20),
           Expanded(
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Column(
                 children: List.generate(
-                  popular.length,
+                  kuliner.length,
                   (index) => Padding(
                     padding: const EdgeInsets.only(bottom: 15),
                     child: GestureDetector(
@@ -120,8 +121,8 @@ class _HomescreenState extends State<Homescreen> {
                         ),
                       );
                       },
-                      child: RekomendasiDestination(
-                          destination: rekomendasi[index]),
+                      child: RecommendWisataCard(
+                          destination: wisata[index]),
                     ),
                   ),
                 ),
@@ -208,36 +209,36 @@ Widget buildAppBar() {
   );
 }
 
-// Widget buildSearchButton() {
-//   return Container(
-//     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-//     decoration: BoxDecoration(
-//       color: kButtonColor,
-//       borderRadius: BorderRadius.circular(20),
-//       boxShadow: [
-//         BoxShadow(
-//           color: Colors.grey.withOpacity(0.8),
-//           spreadRadius: 2,
-//           blurRadius: 10,
-//           offset: const Offset(0, 5),
-//         ),
-//       ],
-//     ),
-//     child: const TextField(
-//       decoration: InputDecoration(
-//         hintText: 'cari destinasi...',
-//         hintStyle: TextStyle(
-//           color: Colors.white54,
-//           fontSize: 18,
-//         ),
-//         prefixIcon: Icon(Icons.search, color: Colors.white54, size: 28),
-//         border: InputBorder.none,
-//         contentPadding: EdgeInsets.symmetric(vertical: 12),
-//       ),
-//       style: TextStyle(
-//         color: Colors.white,
-//         fontSize: 18,
-//       ),
-//     ),
-//   );
-// }
+/*Widget buildSearchButton() {
+  return Container(
+    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+    decoration: BoxDecoration(
+      color: kButtonColor,
+      borderRadius: BorderRadius.circular(20),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.grey.withOpacity(0.8),
+          spreadRadius: 2,
+          blurRadius: 10,
+          offset: const Offset(0, 5),
+        ),
+      ],
+    ),
+    child: const TextField(
+      decoration: InputDecoration(
+        hintText: 'cari destinasi...',
+        hintStyle: TextStyle(
+          color: Colors.white54,
+          fontSize: 18,
+        ),
+        prefixIcon: Icon(Icons.search, color: Colors.white54, size: 28),
+        border: InputBorder.none,
+        contentPadding: EdgeInsets.symmetric(vertical: 12),
+      ),
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 18,
+      ),
+    ),
+  );
+}*/

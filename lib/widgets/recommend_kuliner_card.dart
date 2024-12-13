@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_mobile_7/models/destination_model.dart';
 
-class PopularDestination extends StatelessWidget {
+class RecommendKulinerCard extends StatelessWidget {
   final TravelDestination destination;
-  const PopularDestination({super.key, required this.destination});
+  const RecommendKulinerCard({super.key, required this.destination});
 
   @override
   Widget build(BuildContext context) {
@@ -55,8 +55,7 @@ class PopularDestination extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Center(
-                                child: Text(
+                              Text(
                                   destination.name,
                                   style: const TextStyle(
                                       fontSize: 12,
@@ -64,6 +63,26 @@ class PopularDestination extends StatelessWidget {
                                       fontWeight: FontWeight.w500,
                                       fontFamily: "NunitoSans"),
                                 ),
+                              Row(
+                                // mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    size: 18,
+                                    color: Colors.yellow[800],
+                                  ),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    destination.rate.toString(),
+                                    style: const TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                        fontFamily: "NunitoSans"),
+                                  )
+                                ],
                               ),
                             ],
                           ),
