@@ -202,7 +202,7 @@ class _KulinerState extends State<Kuliner> {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) =>
-                                KulinerDescription(), // ganti lokasi page
+                                KulinerDescription(destination: kuliner[index]), // ganti lokasi page
                           ),
                         );
                       },

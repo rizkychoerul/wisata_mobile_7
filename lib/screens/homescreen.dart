@@ -110,7 +110,7 @@ class _HomescreenState extends State<Homescreen> {
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Column(
                 children: List.generate(
-                  kuliner.length,
+                  wisata.length,
                   (index) => Padding(
                     padding: const EdgeInsets.only(bottom: 15),
                     child: GestureDetector(

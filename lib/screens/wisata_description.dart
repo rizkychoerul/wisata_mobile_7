@@ -1,102 +1,55 @@
 import 'package:flutter/material.dart';
+import 'package:wisata_mobile_7/models/destination_model.dart';
 
-class WisataDescription extends StatefulWidget {
-  const WisataDescription({super.key});
+class WisataDescription extends StatelessWidget {
+  const WisataDescription({super.key, required this.destination});
 
-  @override
-  State<WisataDescription> createState() => _WisataDescriptionadescriptionState();
-}
-
-class _WisataDescriptionadescriptionState extends State<WisataDescription> {
-  var styleTitle = const TextStyle(
-      fontSize: 26, fontWeight: FontWeight.bold, color: Colors.black87);
-
-  var styleDetail = const TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.w400,
-      color: Colors.black54,
-      height: 1.5);
-
-  String textTentang =
-      'Kebun Raya Bogor merupakan UPT balai konservasi tumbuhan di bawah pusat konservasi Kebun Raya Bogor. Lokasinya berada di antara Gunung Gede dan Pangrango di ketinggian 1425 di atas permukaan laut. Areanya sejuk menempati lahan setidaknya seluas 85 Ha. Selain sebagai balai konservasi, Kebun Raya ini juga membuka diri untuk melayani masyarakat sesuai dengan kebutuhannya. Banyak layanan yang ditawarkan kepada masyarakat di antaranya pendidikan lingkungan dan penelitian. Namun, Kebun Raya ini juga menjadi destinasi wisata karena kesejukan dan keindahan pemandangannya.';
+  final TravelDestination destination;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: const IconThemeData(
-          color: Colors.white, // Ubah warna ikon back
-        ),
-        title: const Text(
-          'Wisata',
-          style: TextStyle(color: Colors.white),
-        ),
-        backgroundColor: Colors.black,
+        title: Text(destination.name),
       ),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                width: double.infinity,
-                height: 200,
-                margin: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.all(Radius.circular(15)),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black26,
-                      blurRadius: 10,
-                      offset: Offset(0, 4),
-                    ),
-                  ],
-                  image: const DecorationImage(
-                    image: NetworkImage(
-                        'https://lapisbogor.co.id/wp-content/uploads/2022/09/kebun-raya-bogor-4.jpg'),
-                    fit: BoxFit.cover,
-                  ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Center(
+            child: Container(
+              width: 300,
+              height: 150,
+              margin: EdgeInsets.only(top: 30, bottom: 10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(destination.image![0]),
+                ),
+              ),
+            ),
+          ),
+          Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 50, top: 10, right: 50),
+                child: Text(
+                  destination.name,
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                  maxLines: 2,
                 ),
               ),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                padding: EdgeInsets.only(left: 50, top: 10, right: 50),
                 child: Text(
-                  '...',
-                  style: styleTitle,
+                  destination.description,
                   textAlign: TextAlign.center,
-                ),
-              ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-                child: Text(
-                  textTentang,
-                  textAlign: TextAlign.justify,
-                  style: styleDetail,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 32, vertical: 12),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                  ),
-                  child: const Text(
-                    'Explore More',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
-                  ),
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
                 ),
               ),
             ],
           ),
-        ),
+        ],
       ),
     );
   }

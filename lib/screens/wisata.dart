@@ -202,7 +202,7 @@ class _WisataState extends State<Wisata> {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) =>
-                                WisataDescription(), // ganti lokasi page
+                                WisataDescription(destination: wisata[index]), // ganti lokasi page
                           ),
                         );
                       },
