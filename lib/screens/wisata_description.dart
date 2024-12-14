@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Wisatadescription extends StatefulWidget {
-  const Wisatadescription({super.key});
+class WisataDescription extends StatefulWidget {
+  const WisataDescription({super.key});
 
   @override
-  State<Wisatadescription> createState() => _WisatadescriptionState();
+  State<WisataDescription> createState() => _WisataDescriptionadescriptionState();
 }
 
-class _WisatadescriptionState extends State<Wisatadescription> {
+class _WisataDescriptionadescriptionState extends State<WisataDescription> {
   var styleTitle = const TextStyle(
       fontSize: 26, fontWeight: FontWeight.bold, color: Colors.black87);
 
@@ -28,7 +28,7 @@ class _WisatadescriptionState extends State<Wisatadescription> {
           color: Colors.white, // Ubah warna ikon back
         ),
         title: const Text(
-          '...',
+          'Wisata',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.black,

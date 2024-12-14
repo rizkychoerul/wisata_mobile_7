@@ -24,7 +24,7 @@ class TravelDestination {
 }
 
 List<TravelDestination> listDestination = [
-  // Popular destinations
+  // Rekommendasi Kuliner
   TravelDestination(
       id: 1,
       name: "Leupeut Goreng Cibodas Mantap wkwkwkwk",
@@ -86,7 +86,7 @@ List<TravelDestination> listDestination = [
       description: description,
       rate: 4.7),
 
-  // Recommended destinations
+  // Rekomendasi Wisata
   TravelDestination(
       id: 5,
       name: "Kebun raya bogor",

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_mobile_7/models/destination_model.dart';
-import 'package:wisata_mobile_7/screens/wisatadescription.dart';
+import 'package:wisata_mobile_7/screens/wisata_description.dart';
 import 'package:wisata_mobile_7/utils/const.dart';
 import 'package:wisata_mobile_7/widgets/wisata_card.dart';
 
@@ -202,7 +202,7 @@ class _WisataState extends State<Wisata> {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) =>
-                                Wisatadescription(), // ganti lokasi page
+                                WisataDescription(), // ganti lokasi page
                           ),
                         );
                       },
