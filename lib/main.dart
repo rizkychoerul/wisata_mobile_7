@@ -78,6 +78,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         backgroundColor: Colors.black,
         onTap: _onItemTapped,
         unselectedItemColor: Colors.grey[500],
+        showUnselectedLabels: true,
       ),
     );
   }
