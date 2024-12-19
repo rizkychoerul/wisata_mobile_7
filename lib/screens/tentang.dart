@@ -11,11 +11,7 @@ class _TentangState extends State<Tentang> {
   var styleTitle = TextStyle(fontSize: 20, fontWeight: FontWeight.w700);
   var styleDetail = TextStyle(fontSize: 12, fontWeight: FontWeight.w700);
   String textTentang =
-      '''Kebun Raya Cibodas merupakan UPT balai Konservasi tumbuhan di bawah pusat konservasi Kebun Raya Bogor. 
-      Lokasinya berada di antara gunung Gede dan Pangrango di ketinggian 1425 di atas permukaan laut. 
-      Areanya sejuk menempati lahan setidaknya seluas 85 Ha.Selain sebagai balai konservasi, Kebun Raya ini juga membuka diri untuk melayani masyarakat sesuai dengan kebutuhannya. 
-      Banyak layanan yang ditawarkan kepada masyarakat di antaranya pendidikan Lingkungan dan penelitian. 
-      Namun, Kebun Raya ini juga menjadi destinasi wisata karena kesejukan dan keindahan pemandangannya.''';
+      '''(Description About Cibodas App)''';
 
   @override
   Widget build(BuildContext context) {
