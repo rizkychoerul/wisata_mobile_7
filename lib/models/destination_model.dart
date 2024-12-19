@@ -27,7 +27,7 @@ List<TravelDestination> listDestination = [
   // Rekommendasi Kuliner
   TravelDestination(
       id: 1,
-      name: "Food name",
+      name: "udang asam manis",
       category: 'kuliner',
       image: [
         "https://th.bing.com/th/id/OIP.pzfFG31O8QLxCf60IQEDaAAAAA?rs=1&pid=ImgDetMain",
@@ -42,7 +42,7 @@ List<TravelDestination> listDestination = [
       rate: 4.8),
   TravelDestination(
       id: 2,
-      name: "Food name",
+      name: "seafood",
       category: 'kuliner',
       image: [
         "https://www.hargatiket.net/wp-content/uploads/2018/09/air-terjun-kebun-raya-cibodas.jpg",
@@ -57,7 +57,7 @@ List<TravelDestination> listDestination = [
       rate: 4.9),
   TravelDestination(
       id: 3,
-      name: "Food name",
+      name: "ikan bakan saus tiram",
       category: 'kuliner',
       image: [
         "https://tempatwisataunik.com/wp-content/uploads/2016/03/Taman-Nasional-Gunung-Gede-Pangrango.jpg",
@@ -72,7 +72,7 @@ List<TravelDestination> listDestination = [
       rate: 4.8),
   TravelDestination(
       id: 4,
-      name: "Food name",
+      name: "ayam goreng 1 ekor",
       category: 'kuliner',
       image: [
         "https://tempatwisataunik.com/wp-content/uploads/2016/03/Air-Terjun-Cibeureum-300x168.jpg",
