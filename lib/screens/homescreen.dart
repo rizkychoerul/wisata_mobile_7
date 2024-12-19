@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_mobile_7/models/destination_model.dart';
-import 'package:wisata_mobile_7/screens/kuliner.dart';
 import 'package:wisata_mobile_7/screens/kuliner_description.dart';
-import 'package:wisata_mobile_7/screens/wisata.dart';
 import 'package:wisata_mobile_7/screens/wisata_description.dart';
 import 'package:wisata_mobile_7/utils/const.dart';
 import 'package:wisata_mobile_7/widgets/recommend_kuliner_card.dart';
