@@ -53,25 +53,21 @@ class _BottomNavBarState extends State<BottomNavBar> {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-            backgroundColor: Colors.black
-          ),
+              icon: Icon(Icons.home),
+              label: 'Home',
+              backgroundColor: Colors.black),
           BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            label: 'Wisata',
-            backgroundColor: Colors.black
-          ),
+              icon: Icon(Icons.list),
+              label: 'Wisata',
+              backgroundColor: Colors.black),
           BottomNavigationBarItem(
-            icon: Icon(Icons.food_bank),
-            label: 'Kuliner',
-            backgroundColor: Colors.black
-          ),
+              icon: Icon(Icons.food_bank),
+              label: 'Kuliner',
+              backgroundColor: Colors.black),
           BottomNavigationBarItem(
-            icon: Icon(Icons.help_outline),
-            label: 'Tentang',
-            backgroundColor: Colors.black
-          ),
+              icon: Icon(Icons.help_outline),
+              label: 'Tentang',
+              backgroundColor: Colors.black),
         ],
         currentIndex: selectedPage,
         selectedItemColor: Colors.white,

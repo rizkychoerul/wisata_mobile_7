@@ -27,7 +27,7 @@ List<TravelDestination> listDestination = [
   // Rekommendasi Kuliner
   TravelDestination(
       id: 1,
-      name: "Leupeut Goreng Cibodas Mantap wkwkwkwk",
+      name: "Food name",
       category: 'kuliner',
       image: [
         "https://th.bing.com/th/id/OIP.pzfFG31O8QLxCf60IQEDaAAAAA?rs=1&pid=ImgDetMain",
