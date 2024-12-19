@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_mobile_7/models/destination_model.dart';
 import 'package:wisata_mobile_7/screens/kuliner.dart';
+import 'package:wisata_mobile_7/screens/kuliner_description.dart';
 import 'package:wisata_mobile_7/screens/wisata.dart';
+import 'package:wisata_mobile_7/screens/wisata_description.dart';
 import 'package:wisata_mobile_7/utils/const.dart';
 import 'package:wisata_mobile_7/widgets/recommend_kuliner_card.dart';
 import 'package:wisata_mobile_7/widgets/recommend_wisata_card.dart';
@@ -76,7 +78,7 @@ class _HomescreenState extends State<Homescreen> {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => Kuliner(), // ganti lokasi page
+                          builder: (context) => KulinerDescription(destination: kuliner[index]), // ganti lokasi page
                         ),
                       );
                     },
@@ -117,7 +119,7 @@ class _HomescreenState extends State<Homescreen> {
                       onTap: () {
                         Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => Wisata(), // ganti lokasi page
+                          builder: (context) => WisataDescription(destination: wisata[index]), // ganti lokasi page
                         ),
                       );
                       },
