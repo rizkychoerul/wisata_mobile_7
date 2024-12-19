@@ -48,11 +48,7 @@ class WisataCard extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '''Kebun Raya Cibodas (aksara Sunda: ᮊᮨᮘᮥᮔ᮪ ᮛᮚ ᮎᮤᮘᮧᮓᮞ᮪) (bahasa Inggris: Cibodas Botanical Garden), 
-                  terletak di Kompleks Hutan Gunung Gede dan Gunung Pangrango, Desa Cimacan, Cipanas, Cianjur, Jawa Barat. 
-                  Topografi lapangannya bergelombang dan berbukit-bukit dengan ketinggian kurang lebih 1.300 s.d. 1.425 meter di atas permukaan laut dengan luas 84,99 hektar. 
-                  Temperatur rata-rata 20,06 °C, kelembaban 80,82 % dan rata-rata curah hujan 2.950 mm per tahun. 
-                  Kebun Raya Cibodas merupakan tempat yang nyaman untuk beristirahat sambil menikmati keindahan berbagai jenis tumbuhan yang berasal dari Indonesia dan negara-negara lain.''',
+                  destination.description,
                   style: TextStyle(fontSize: 8),
                   maxLines: 2,
                 ),

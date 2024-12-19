@@ -48,7 +48,7 @@ class KulinerCard extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '''(Description kuliner)''',
+                  destination.description,
                   style: TextStyle(fontSize: 8),
                   maxLines: 2,
                 ),

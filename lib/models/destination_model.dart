@@ -1,8 +1,12 @@
 import 'dart:math';
 
 Random random = Random();
-const description =
-    'Tempat-tempat wisata menawarkan beragam pengalaman, masing-masing dengan pesona dan daya tarik yang unik. Dari lanskap alam yang memukau hingga landmark bersejarah, selalu ada sesuatu untuk setiap wisatawan. Wisata PesisirDestinasi seperti pantai tropis mengundang relaksasi dengan air yang jernih, sementara daerah pegunungan menawarkan jalur pendakian yang penuh petualangan dan pemandangan yang menakjubkan.';
+
+const kuliner_description =
+    '''(Kuliner Description)''';
+
+const wisata_description =
+    '''(Wisata Description)''';
 
 class TravelDestination {
   final int id, price, review;
@@ -27,7 +31,7 @@ List<TravelDestination> listDestination = [
   // Rekommendasi Kuliner
   TravelDestination(
       id: 1,
-      name: "udang asam manis",
+      name: "Udang Asam Manis",
       category: 'kuliner',
       image: [
         "https://th.bing.com/th/id/OIP.pzfFG31O8QLxCf60IQEDaAAAAA?rs=1&pid=ImgDetMain",
@@ -38,11 +42,11 @@ List<TravelDestination> listDestination = [
       location: 'Jawa Timur, Indonesia',
       review: random.nextInt(250) + 20,
       price: 150,
-      description: description,
+      description: kuliner_description,
       rate: 4.8),
   TravelDestination(
       id: 2,
-      name: "seafood",
+      name: "Seafood",
       category: 'kuliner',
       image: [
         "https://www.hargatiket.net/wp-content/uploads/2018/09/air-terjun-kebun-raya-cibodas.jpg",
@@ -53,11 +57,11 @@ List<TravelDestination> listDestination = [
       location: 'NTT, Indonesia',
       review: random.nextInt(250) + 20,
       price: 250,
-      description: description,
+      description: kuliner_description,
       rate: 4.9),
   TravelDestination(
       id: 3,
-      name: "ikan bakan saus tiram",
+      name: "Ikan Bakar Saus Tiram",
       category: 'kuliner',
       image: [
         "https://tempatwisataunik.com/wp-content/uploads/2016/03/Taman-Nasional-Gunung-Gede-Pangrango.jpg",
@@ -68,11 +72,11 @@ List<TravelDestination> listDestination = [
       location: 'Papua Barat, Indonesia',
       review: random.nextInt(250) + 20,
       price: 250,
-      description: description,
+      description: kuliner_description,
       rate: 4.8),
   TravelDestination(
       id: 4,
-      name: "ayam goreng 1 ekor",
+      name: "Ayam Goreng Karuhun",
       category: 'kuliner',
       image: [
         "https://tempatwisataunik.com/wp-content/uploads/2016/03/Air-Terjun-Cibeureum-300x168.jpg",
@@ -83,13 +87,13 @@ List<TravelDestination> listDestination = [
       location: 'Bali, Indonesia',
       review: random.nextInt(250) + 20,
       price: 100,
-      description: description,
+      description: kuliner_description,
       rate: 4.7),
 
   // Rekomendasi Wisata
   TravelDestination(
       id: 5,
-      name: "Kebun raya bogor",
+      name: "Kebun Raya Bogor",
       category: 'wisata',
       image: [
         "https://tempatwisataunik.com/wp-content/uploads/2016/03/Kebun-Raya-Bogor...-300x157.jpg",
@@ -100,11 +104,11 @@ List<TravelDestination> listDestination = [
       location: 'Jawa Timur, Indonesia',
       review: random.nextInt(250) + 20,
       price: 180,
-      description: description,
+      description: wisata_description,
       rate: 4.6),
   TravelDestination(
       id: 6,
-      name: "Botanical garden",
+      name: "Botanical Garden",
       category: 'wisata',
       image: [
         "https://cianjurkuy.id/wp-content/uploads/2023/09/Menikmati-Keindahan-Alam-di-Wisata-Cibodas-Botanical-Garden.webp",
@@ -115,7 +119,7 @@ List<TravelDestination> listDestination = [
       location: 'Sumatera Utara, Indonesia',
       review: random.nextInt(250) + 20,
       price: 120,
-      description: description,
+      description: wisata_description,
       rate: 4.5),
   TravelDestination(
       id: 7,
@@ -130,11 +134,11 @@ List<TravelDestination> listDestination = [
       location: 'NTT, Indonesia',
       review: random.nextInt(250) + 20,
       price: 350,
-      description: description,
+      description: wisata_description,
       rate: 4.7),
   TravelDestination(
       id: 8,
-      name: "Cibodas camp and tour",
+      name: "Cibodas Camp and Tour",
       category: 'wisata',
       image: [
         "https://th.bing.com/th/id/R.dc235aea9b975766a4b4fbe3288f334d?rik=xee%2b16L9StuSUA&riu=http%3a%2f%2fcibodascamptour.com%2fuserfiles%2fimages%2flayanantourlokasipariwisataCibodas%2flayanan+tour+lokasi+pariwisata+Cibodas+(2).JPG&ehk=evQV21Umc7gCIm%2bBejpfTRqB4RHEEkYe4q41vYqhDYI%3d&risl=&pid=ImgRaw&r=0",
@@ -145,11 +149,11 @@ List<TravelDestination> listDestination = [
       location: 'Bali, Indonesia',
       review: random.nextInt(250) + 20,
       price: 200,
-      description: description,
+      description: wisata_description,
       rate: 4.7),
   TravelDestination(
       id: 9,
-      name: "pibigbon camp",
+      name: "Pibigbon Camp",
       category: 'wisata',
       image: [
         "https://i.ytimg.com/vi/R8gbpK43CzQ/maxresdefault.jpg",
@@ -160,6 +164,6 @@ List<TravelDestination> listDestination = [
       location: 'Jawa Tengah, Indonesia',
       review: random.nextInt(250) + 20,
       price: 150,
-      description: description,
+      description: wisata_description,
       rate: 4.8),
 ];
